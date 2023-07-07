@@ -43,7 +43,7 @@ app.get("/iceCreams", (req, res) => {
 
 app.post("/iceCreams", (req, res) => {
     const newFlavor = req.body;
-    jobs.push(newFlavor);
+    iceCreams.push(newFlavor);
     res.status(201).send(newFlavor);
   });
   
@@ -74,6 +74,6 @@ app.delete("/iceCreams/:id", (req, res) => {
       res.status(404).send({ message: " not found" });
     }
   });
-  
+
 
 module.exports = iceCreams; 
